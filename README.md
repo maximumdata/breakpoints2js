@@ -25,7 +25,7 @@ Here's a basic example
 ## Dependencies
 The mixin assumes you're using Sass, but you could always adapt this for use with plain CSS if you prefer. The javascript is all vanilla, so it requires no third party libraries.
 
-## Why use this?
+## Why should I use this?
 Of course, you could accomplish a similar thing with `window.innerWidth` or perhaps `document.documentElement.clientWidth`. However, utilizing this library you can set your breakpoints ONCE, inside your _variables.sass partial (or wherever you like), and have access to them not only throughout your Sass code, but in your front end javascript as well.
 
 For example, I recently used this library to adjust which animations would play at different screen sizes on my ajax powered blog at [http://mikedettmer.com/](http://mikedettmer.com). This way, I can ensure that even if my breakpoints for different screen sizes change down the road, the proper animation set will still trigger in tandem with the new media queries.
