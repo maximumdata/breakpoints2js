@@ -10,7 +10,8 @@ Here's a basic example
 ```
 <html>
 <head>
-<link rel="stylesheet" href="style.css"> <!-- assume this is the stylesheet of your compiled Sass, in which you @import bp2js.sass -->
+<!-- assume this is the stylesheet of your compiled Sass, in which you @import bp2js.sass -->
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 <script src="bp2js.js"></script>
