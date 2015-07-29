@@ -1,5 +1,5 @@
 # breakpoints2js
-A library to import your sass breakpoint variables to javascript.
+A library to import your Sass breakpoint variables to javascript.
 
 ## Usage
 Import the bp2js.sass file into your Sass files (or simply copy and paste the mixins near the top of your Sass), call whichever mixin is appropriate for your media queries (bp2jsMAX or bp2jsMIN).
@@ -27,6 +27,7 @@ The mixin assumes you're using Sass, but you could always adapt this for use wit
 ## Why use this?
 Of course, you could accomplish a similar thing with `window.innerWidth` or perhaps `document.documentElement.clientWidth`. However, utilizing this library you can set your breakpoints ONCE, inside your _variables.sass partial (or wherever you like), and have access to them not only throughout your Sass code, but in your front end javascript as well.
 For example, I recently used this library to adjust which animations would play at different screen sizes on my ajax powered blog at [http://mikedettmer.com/](http://mikedettmer.com). This way, I can ensure that even if my breakpoints for different screen sizes change down the road, the proper animation set will still trigger in tandem with the new media queries.
+More generally, this library provides a reliable, cross-browser guarantee to execute javascript at the exact pixel widths that your breakpoints kick in. But still, my favorite part of it is having access to my Sass breakpoint variables in my javascript.
 
 ## Demo
 Check `/demo/index.html` for a basic example, or to see a live example, check [http://mikedettmer.com/demo/breakpoints2js/](http://mikedettmer.com/demo/breakpoints2js/).
