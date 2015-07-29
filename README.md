@@ -7,12 +7,21 @@ Import the bp2js.sass file into your Sass files (or simply copy and paste the mi
 Then, include the bp2js.js file in your html, and call bp2js() in your javascript. The function returns the current value of the 'content' property of 'body:after'
 
 Here's a basic example
+```
+// styles.sass
+@import vendor/bp2js
 
+$medium: "min-width: 469px"
+$large: "min-width: 769px"
+
+body
+  +bp2jsMIN($medium, $large)
+```
 ```
 <html>
 <head>
-<!-- assume this is the stylesheet of your compiled Sass, in which you @import bp2js.sass -->
-<link rel="stylesheet" href="style.css">
+<!-- assume this is the stylesheet of your compiled Sass -->
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
 <script src="bp2js.js"></script>
