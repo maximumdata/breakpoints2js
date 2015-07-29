@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>breakpoints2js</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="one" class="box"></div>
+  <div id="two" class="box"></div>
+  
+  <a href="http://google.com" id="link">blah blah</a>
+  
+  <script src="../dist/bp2js.js"></script>
+  
+  <script type="text/javascript">
+    
+    window.onresize = demo;
+    
+    var one = document.getElementById("one"),
+        two = document.getElementById("two"),
+        link = document.getElementById("link");
+    
+    function demo() {
+          
+      switch( bp2js() ) {
+        
+        case "small":
+          console.log("it's small!");
+          one.style.backgroundColor = "red";
+          two.style.backgroundColor = "yellow";
+          link.href = "http://mikedettmer.com/";
+          break;
+        case "medium":
+          console.log("it's medium!");
+          one.style.backgroundColor = "blue";
+          two.style.backgroundColor = "orange";
+          link.href = "http://github.com";
+          break;
+        case "large":
+          console.log("it's large!");
+          one.style.backgroundColor = "pink";
+          two.style.backgroundColor = "purple";
+          link.href = "http://google.com";
+          break;
+        default:
+          console.log("oh no, something broke!");
+      }
+      
+    }
+  </script>
+</body>
+</html>

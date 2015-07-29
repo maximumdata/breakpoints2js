@@ -1,0 +1,41 @@
+// import the mixin library
+@import ../dist/bp2js
+
+// set up our breakpoint variables
+// we're gonna use max-width for the demo, but remember, this library also contains a mixin for min-width
+$small-bp: "max-width: 468px"
+// structuring the medium media query this way will ensure we end up with @media screen and (min-width: 469px) and (max-width: 768px)
+$medium-bp: "min-width: 469px) and (max-width: 768px" 
+
+body // use the mixin on the body selector
+  +bp2jsMAX($small-bp, $medium-bp)
+
+
+
+// remember, you can also use min-width media queries with this library, like so:
+// $medium-bp: "min-width: 469px"
+// $large-bp: "min-width: 769px"
+// body
+//   +bp2jsMIN($medium-bp, $large-bp)
+
+
+
+
+
+
+// demo styles
+
+body
+  text-align: center
+
+.box
+  width: 200px
+  height: 200px
+  margin: 10px auto
+
+#one
+  background-color: pink
+
+#two
+  background-color: purple
+  

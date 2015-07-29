@@ -1,0 +1,23 @@
+body:after {
+  display: none;
+  content: "large"; }
+  @media screen and (max-width: 468px) {
+    body:after {
+      content: "small"; } }
+  @media screen and (min-width: 469px) and (max-width: 768px) {
+    body:after {
+      content: "medium"; } }
+
+body {
+  text-align: center; }
+
+.box {
+  width: 200px;
+  height: 200px;
+  margin: 10px auto; }
+
+#one {
+  background-color: pink; }
+
+#two {
+  background-color: purple; }

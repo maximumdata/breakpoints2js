@@ -1,0 +1,17 @@
+@mixin bp2jsMAX($sm, $md) // default to content: "large" since you're using max-width breakpoints
+  &:after
+    display: none
+    content: "large"
+    @media screen and ($sm)
+      content: "small"
+    @media screen and ($md)
+      content: "medium"
+
+@mixin bp2jsMIN($md, $lg) // default to content: "small" since you're using min-width breakpoints
+  &:after
+    display: none
+    content: "small"
+    @media screen and ($md)
+      content: "medium"
+    @media screen and ($lg)
+      content: "large"
